@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In & Sign Up</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #89fffd, #ef32d9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 600px;
+      height: 400px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      display: flex;
+    }
+
+    .form-box {
+      width: 50%;
+      padding: 40px;
+      transition: 0.5s;
+    }
+
+    .sign-up-box {
+      background: #ff7eb9;
+      color: white;
+      transform: translateX(-100%);
+    }
+
+    .sign-in-box {
+      background: #7afcff;
+      color: black;
+    }
+
+    .form-container:hover .sign-up-box {
+      transform: translateX(0);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #7afcff;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      background: #7afcff;
+      color: black;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #89fffd;
+    }
+
+    .form-container {
+      width: 200%;
+      display: flex;
+    }
+
+    .form {
+      width: 50%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="form-container">
+      <div class="form-box sign-in-box form">
+        <h2>Sign In</h2>
+        <form>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
+
+      <div class="form-box sign-up-box form">
+        <h2>Sign Up</h2>
+        <form>
+          <input type="text" placeholder="Username" required>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
